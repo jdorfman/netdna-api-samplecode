@@ -4,7 +4,7 @@
     $cur = date('c');
     $cur2 = date('u');
     $apiKey = 'api-key';
-    $apiUserId = user-id;
+    $apiUserId = 'user-id';
     $namespace = 'pullzone';
     $method = 'create';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
