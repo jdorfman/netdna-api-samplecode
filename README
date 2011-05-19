@@ -1,0 +1,5 @@
+The NetDNA API is an XML-RPC based programming interface to many of the most common functions found in the NetDNA Control Panel.
+
+The API includes important functions to create, and modify, prime and purge cache files, list and update users and create all of the various reports.
+
+To use the NetDNA API, you must have a NetDNA account, an API Key, an API user id and the xmlrpc library installed. These are all described in more detail below along with complete documentation of all the API methods and their parameters. Sample scripts are included later in this document to make using the API as easy as possible.
