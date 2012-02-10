@@ -3,13 +3,14 @@
     include("lib/xmlrpc.inc");
     $cur = date('c');
     $cur2 = date('u');
-    $apiKey = 'api-key';
-    $apiUserId = 'user-id';
+    $apiKey = 'qrpttgm01qv10sk58rtarv4vfyk3mn5r';
+    $apiUserId = '7318';
     $namespace = 'pullzone';
     $method = 'create';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
-    $values['name'] = 'xmlrpc';
+    $values['name'] = 'xmlrpc02072012';
     $values['origin'] = 'http://www.example.com';
+    $values['vanity_domain'] = 'cdn.domain.com';
 
     
     $f=new xmlrpcmsg("$namespace.$method", array(
