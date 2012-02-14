@@ -1,9 +1,12 @@
 <?php
-date_default_timezone_set('America/Los_Angeles');
-$cur = date('c');
+
 $apiKey = 'jdorfmanv10sk58rtarv4vfyk3mn5r';
 $apiUserId = '0000';
 $companyId = 'companyalias';
-$authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
+
+// ******** Do not Remove or edit: ***********
+date_default_timezone_set('America/Los_Angeles');
+$cur = date('c');
+
 ?>
 

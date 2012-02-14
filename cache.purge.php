@@ -4,7 +4,8 @@
     $namespace = 'cache';
     $method = 'purge';
     $url = 'http://cdn.86400.io/beta03/app/files/NetDNA-logo-withtagline-wide.png';
-
+    $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
+    
     $f=new xmlrpcmsg("$namespace.$method", array(
     php_xmlrpc_encode($apiUserId),
     php_xmlrpc_encode($authString),
