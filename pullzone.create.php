@@ -1,14 +1,13 @@
 <?php
     date_default_timezone_set('America/Los_Angeles');
     include("lib/xmlrpc.inc");
+    include("lib/config.inc");
     $cur = date('c');
     $cur2 = date('u');
-    $apiKey = 'qrpttgm01qv10sk58rtarv4vfyk3mn5r';
-    $apiUserId = '7318';
     $namespace = 'pullzone';
     $method = 'create';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
-    $values['name'] = 'xmlrpc02072012';
+    $values['name'] = 'pullzonename';
     $values['origin'] = 'http://www.example.com';
     $values['vanity_domain'] = 'cdn.domain.com';
 
