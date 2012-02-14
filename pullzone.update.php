@@ -1,15 +1,15 @@
 <?php
     date_default_timezone_set('America/Los_Angeles');
     include("lib/xmlrpc.inc");
-    $cur = date('c');
-    $apiKey = 'api-key';
-    $apiUserId = user-id;
+    include("lib/config.inc");
     $namespace = 'pullzone';
     $method = 'update';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
-    $id = 'zone-id';
-    $values['name'] = 'zonename';
-    $values['origin'] = 'http://www.example.com';
+    $id = '34081';
+    $values['origin'] = 'http://www.new-origin.com';
+    $values['ip'] = '127.0.0.1';
+    $values['compress'] = '1'; // Gzip: 1 = Enable | 0 = Disable
+    $values['label'] = 'New Label';
 
     $f=new xmlrpcmsg("$namespace.$method", array(
     php_xmlrpc_encode($apiUserId),
