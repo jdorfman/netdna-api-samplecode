@@ -1,17 +1,12 @@
 <?php
-    date_default_timezone_set('America/Los_Angeles');
     include("lib/xmlrpc.inc");
-    include("lib/config.inc"); //api key and user id
-    $cur = date('c');
-//    $apiKey = 'api-key';
-//    $apiUserId = 'user-id';
+    include("lib/config.inc"); 
     $namespace = 'report';
     $method = 'getNodeHits';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
-//    $companyId = 'jdorfman';
     $dateFrom = '2012-01-10';
     $dateTo = '2012-02-10';
-    $zoneId = '21826';
+    $zoneId = '21826'; // Replace with your Zone ID 
 
     $f=new xmlrpcmsg("$namespace.$method", array(
     	php_xmlrpc_encode($apiUserId),
