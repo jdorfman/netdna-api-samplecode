@@ -1,14 +1,13 @@
 <?php
+    // The remaining prepaid bandwidth
     date_default_timezone_set('America/Los_Angeles');
-    include("/path-to/xmlrpc.inc");
-    $cur = date('c');
-    $apiKey = 'api-key';
-    $apiUserId = 'user-id';
+    include("lib/xmlrpc.inc");
+    include("lib/config.inc");
     $namespace = 'account';
     $method = 'getBandwidth';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
-    $from = '2011-05-10';
-    $to = '2011-05-11';
+    $from = '2012-02-10';
+    $to = '2012-02-11';
 
     $f=new xmlrpcmsg("$namespace.$method", array(
     php_xmlrpc_encode($apiUserId),
