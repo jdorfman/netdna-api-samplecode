@@ -1,9 +1,6 @@
 <?php
-    date_default_timezone_set('America/Los_Angeles');
     include("lib/xmlrpc.inc");
     include("lib/config.inc");
-    $cur = date('c');
-    $cur2 = date('u');
     $namespace = 'pullzone';
     $method = 'create';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
