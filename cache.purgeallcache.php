@@ -1,13 +1,12 @@
 <?php
+    // This will only work on a Nginx Pull Zone, not Apache Traffic Server
     date_default_timezone_set('America/Los_Angeles');
-    include("/path-to/xmlrpc.inc");
-    $cur = date('c');
-    $apiKey = 'api-key';
-    $apiUserId = 'user-id';
+    include("lib/xmlrpc.inc");
+    include("lib/config.inc");
     $namespace = 'cache';
     $method = 'purgeAllCache';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
-    $zone = 'zonename';
+    $zone = 'zonename'; // Replace with your zone name
 
 
     $f=new xmlrpcmsg("$namespace.$method", array(
