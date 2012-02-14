@@ -7,5 +7,5 @@ To use the NetDNA API, you must have a NetDNA account, an API Key, an API user i
 ------------------
 02-14-2012:
 
-* The XML-RPC lirary is now included.  
+* The PHP XML-RPC library 2.2.2 is now included.  
 * There is a config.inc.sample file in /lib make sure to rename it to config.inc and put the correct values in place.
