@@ -8,7 +8,6 @@
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
     $zone = 'zonename'; // Replace with your zone name
 
-
     $f=new xmlrpcmsg("$namespace.$method", array(
     php_xmlrpc_encode($apiUserId),
     php_xmlrpc_encode($authString),
