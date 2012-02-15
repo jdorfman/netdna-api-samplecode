@@ -5,7 +5,6 @@
     $method = 'getCacheHitStats';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
     $zoneId = '21826'; // Pull Zone ID
-    $companyId = 'acmeinc'; // company alias
     $dateFrom = '2012-02-10';
     $dateTo = '2012-02-14';
 
