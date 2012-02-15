@@ -1,15 +1,14 @@
 <?php
-    date_default_timezone_set('America/Los_Angeles');
     include("lib/xmlrpc.inc");
-    $cur = date('c');
-    $apiKey = 'api-key';
-    $apiUserId = 'user-id';
+    include("lib/config.inc");
     $namespace = 'pushzone';
     $method = 'create';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
-    $values['name'] = 'pushzonetest';
-    $values['password'] = 'password123';
-
+    $values['name'] = 'pushzoneexample';
+    $values['password'] = 'sEcuRep@$$w0rd';
+    $values['compress'] = '1'; // 1=yes 0=no
+    $values['vanity_domain'] = 'push.yourdomain.com'; // cname
+    $values['label'] = 'Push Zone Example';
 
     $f=new xmlrpcmsg("$namespace.$method", array(
     php_xmlrpc_encode($apiUserId),
