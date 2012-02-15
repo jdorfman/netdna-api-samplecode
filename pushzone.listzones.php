@@ -1,9 +1,6 @@
 <?php
-    date_default_timezone_set('America/Los_Angeles');
     include("lib/xmlrpc.inc");
-    $cur = date('c');
-    $apiKey = 'api-key';
-    $apiUserId = 'user-id';
+    include("lib/config.inc");
     $namespace = 'pushzone';
     $method = 'listZones';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
