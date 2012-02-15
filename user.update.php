@@ -1,18 +1,15 @@
 <?php
-    date_default_timezone_set('America/Los_Angeles');
-    include("/path-to/xmlrpc.inc");
-    $cur = date('c');
-    $apiKey = 'enter-your-api-key';
-    $apiUserId = 'enter-your-user-id';
+    include("lib/xmlrpc.inc");
+    include("lib/config.inc");
     $namespace = 'user';
     $method = 'update';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
-    $id = 'enter-your-id';
+    $id = '7385'; // User ID, run user.listusers.php
     $values['firstname'] = 'Samir';
     $values['lastname'] = 'Nagheenanajar';
-    $values['email'] = 'snagheenanajar@pcloadletter.com';
+    $values['email'] = 's.nagheenanajar@pcloadletter.com';
     $values['phone'] = '3235555555';
-    $values['password'] = 'password123';
+    $values['password'] = 'n3wP@$$w0rd';
 
     $f=new xmlrpcmsg("$namespace.$method", array(
     php_xmlrpc_encode($apiUserId),
