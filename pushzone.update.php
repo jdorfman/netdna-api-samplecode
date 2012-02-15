@@ -1,16 +1,13 @@
 <?php
-    date_default_timezone_set('America/Los_Angeles');
     include("lib/xmlrpc.inc");
-    $cur = date('c');
-    $apiKey = 'api-key';
-    $apiUserId = 'user-id';
+    include("lib/config.inc");
     $namespace = 'pushzone';
     $method = 'update';
     $authString = hash('sha256', $cur . ':' . $apiKey . ':' . $method);
-    $id = '17260';
-    $values['name'] = 'pushzoneupdate';
-    $values['password'] = 'password123';
-
+    $id = '34866'; // Push Zone ID
+    $values['password'] = 'SecuRePa$$w0rdUpdate';
+    $values['compress'] = '0'; // 1=yes 0=no
+    $values['label'] = 'Update Push Label';
 
     $f=new xmlrpcmsg("$namespace.$method", array(
     php_xmlrpc_encode($apiUserId),
