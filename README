@@ -1,3 +1,6 @@
+**Note:** This API is now retired.  I am keeping it on github for sentimental reasons.
+
+
 The NetDNA API is an XML-RPC based programming interface to many of the most common functions found in the NetDNA Control Panel.
 
 The API includes important functions to create, and modify, prime and purge cache files, list and update users and create all of the various reports.
